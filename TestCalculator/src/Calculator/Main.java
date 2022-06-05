@@ -158,13 +158,14 @@ public class Main {
         try {
             System.out.println("Калькулятор для выражений вида: \"Число1 Операция Число2\", через пробел. Допускаются числа от 1 до 10 или от I до X включительно. Операции: + - * /");
             System.out.print("Введите выражение: ");
-            BufferedReader bufReader = new BufferedReader(new InputStreamReader(System.in));
-            String input = bufReader.readLine();
+           Scanner scan = new Scanner(System.in);
+          String input = scan.nextLine();
 
-            Calculator calculator = new Calculator();
-            String result = calculator.calc(input);
-            System.out.println("Результать: "+result);
-        } catch (CalcException | IOException e) {
+          Calculator calculator = new Calculator();
+          String result = calculator.calc(input);
+          System.out.println("Результать: " + result);
+
+        } catch (CalcException e) {
 
         }
 
